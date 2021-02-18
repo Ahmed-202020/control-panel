@@ -1,8 +1,3 @@
-import "./assets/sass/style.scss";
-import "normalize.css/normalize.css";
-
-
-
 (function(){
     const closeBanners = document.querySelectorAll(".c-banner__close");
     closeBanners.forEach(closeBanner =>{

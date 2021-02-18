@@ -5,12 +5,14 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry:{
+      'app': './src/index.js',
+      'assets/js/banner': './src/assets/js/banner.js',
+    },
     output: {
       path: path.resolve(__dirname, './app'),
-      filename: 'app.js',
+      filename: '[name].js',
       publicPath: '/',
-      
     },
     module: {
       rules: [
@@ -74,6 +76,27 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: "index.html",
           template: "./src/index.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "button.html",
+          template: "./src/components/button.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "textfield.html",
+          template: "./src/components/textfield.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "card.html",
+          template: "./src/components/card.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "banner.html",
+          template: "./src/components/banner.html",
+          chunks:['app' , 'assets/js/banner'],
         }),
       ],
     devServer: {

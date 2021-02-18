@@ -1,3 +1,8 @@
-a:active , a:hover , a:focus{
+a{
     text-decoration: none;
+    &:active,
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
 }
