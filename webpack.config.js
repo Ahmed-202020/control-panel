@@ -8,6 +8,9 @@ module.exports = {
     entry:{
       'app': './src/index.js',
       'assets/js/banner': './src/assets/js/banner.js',
+      'assets/js/tabs': './src/assets/js/tabs.js',
+      'assets/js/upload' : './src/assets/js/upload.js',
+      'assets/js/chart' : './src/assets/js/chart.js',
     },
     output: {
       path: path.resolve(__dirname, './app'),
@@ -97,6 +100,51 @@ module.exports = {
           filename: "banner.html",
           template: "./src/components/banner.html",
           chunks:['app' , 'assets/js/banner'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "list.html",
+          template: "./src/components/list.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "tabs.html",
+          template: "./src/components/tabs.html",
+          chunks:['app' , 'assets/js/tabs'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "upload.html",
+          template: "./src/components/upload.html",
+          chunks:['app' , 'assets/js/upload'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "chart.html",
+          template: "./src/components/chart.html",
+          chunks:['app' , 'assets/js/chart'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "help.html",
+          template: "./src/components/help.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "summary.html",
+          template: "./src/components/summary.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "actions.html",
+          template: "./src/components/actions.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "sidebar.html",
+          template: "./src/components/sidebar.html",
+          chunks:['app'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: "table.html",
+          template: "./src/components/table.html",
+          chunks:['app'],
         }),
       ],
     devServer: {
