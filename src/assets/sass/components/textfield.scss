@@ -29,3 +29,7 @@
     font-size: 13px;
     color: $color-text-subdued;
 }
+.c-textfield__input--left{
+    direction: rtl;
+    text-align: left;
+}

@@ -1,16 +1,18 @@
 $sidebar-control-width:35px;
 $sidebar-icon-size:20px;
 $sidebar-logo-height :$sidebar-control-width;
+$color-background: #e0e2f1;
 
 .c-sidebar{
     width: $layout-sidebar;
     height: 100vh;
     position: fixed;
-    background-color:#e0e2f1;
+    background-color: rgba($color-background  , 0.9);
     top: 0;
     right: 0;
     padding: spacing("wide") spacing("small");
     display: flex;
+  
     .c-sidebar__control{
         display: flex;
         flex-direction: column;
