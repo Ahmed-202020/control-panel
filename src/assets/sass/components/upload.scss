@@ -1,3 +1,4 @@
+$upload-size:400px;
 .c-upload{
     @include e-card;
     min-width: 400px;
@@ -87,5 +88,11 @@ img{
             display: block;
         }
     }
-    
+}
+@media(max-width:$upload-size){
+    .c-upload{
+       min-width: initial;
+       width: 100%;
+
+    }
 }

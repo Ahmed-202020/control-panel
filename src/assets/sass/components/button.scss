@@ -7,6 +7,7 @@
     padding: 8px 16px;
     border-radius: 3px;
    display: inline-block;
+   white-space: nowrap;
    cursor: pointer;
    background-color: $color-white;
    border: 1px solid darken($color-white , 15%);

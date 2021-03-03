@@ -3,6 +3,7 @@
     display: inline-flex;
     align-items: center;
     padding: spacing("small") spacing("wide");
+    flex-wrap: wrap;
    
 }
 .c-summary__data{
@@ -41,3 +42,8 @@ font-weight: normal;
         font-weight: normal;
     }
 }
+
+.c-summary--spaceless{
+    padding-left: 0;
+    padding-right: 0;
+}   

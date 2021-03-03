@@ -9,37 +9,38 @@ $icon-size:32px;
     border-top: 3px solid $color-banner-dark;
     padding: spacing("small") spacing("extra-wide");
     position: relative;
-    .c-banner__title{
-        color: $color-text-subdued;
-        font-weight: normal;
-    }
-    .c-banner__desc{
-        font-size: 14px;
-    }
-    .c-banner__action{
-        color: $color-text-subdued;
-        border-color: $color-text-subdued;
-    }
-    .c-banner__icon,
-    .c-banner__close{
-        position: absolute;
-        top: spacing("small");
-    }
-    .c-banner__close{
-        left: spacing("normal");
-        cursor: pointer;
-    }
-    .c-banner__icon{
-        right: spacing(normal);
-        color: $color-banner-dark;
-        background: $color-banner-light;
-        border-radius: 50%;
-        width: $icon-size;
-        height: $icon-size;
-        line-height: $icon-size;
-        text-align: center;
-    }
+}    
+.c-banner__title{
+    color: $color-text-subdued;
+    font-weight: normal;
 }
+.c-banner__desc{
+    font-size: 14px;
+}
+.c-banner__action{
+    color: $color-text-subdued;
+    border-color: $color-text-subdued;
+}
+.c-banner__icon,
+.c-banner__close{
+    position: absolute;
+    top: spacing("small");
+}
+.c-banner__close{
+    left: spacing("normal");
+    cursor: pointer;
+}
+.c-banner__icon{
+    right: spacing(normal);
+    color: $color-banner-dark;
+    background: $color-banner-light;
+    border-radius: 50%;
+    width: $icon-size;
+    height: $icon-size;
+    line-height: $icon-size !important;
+    text-align: center;
+}
+
 .c-banner > *{
     transition:  opacity 200ms ease;
 }
@@ -52,4 +53,20 @@ $icon-size:32px;
 .c-banner.collapse{
     transform: scaleY(0);
     transform-origin: 50% 0%; 
+}
+@media(max-width:$pb-phone-normal){
+    .c-banner{
+        padding-left: spacing("small");
+        padding-right: spacing("small");
+    }
+    .c-banner__icon{
+        right: spacing("small");
+    }
+    .c-banner__close{
+      left: spacing("small");
+    }
+    .c-banner__title{
+        margin-left: spacing("normal");
+        margin-right: $icon-size + spacing("extra-small");
+    }
 }

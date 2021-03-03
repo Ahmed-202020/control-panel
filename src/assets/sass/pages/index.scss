@@ -16,3 +16,18 @@
 .welcome-tag{
     font-size: 28px;
 }
+@media(max-width:$pb-sidebar){
+    .page-container{
+        padding-right: $dense-width + spacing("small");
+        padding-left: spacing("small");
+    }
+    .home-intro{
+        margin: spacing("normal") 0 spacing("wide");
+        h2{
+            font-size: 24px;
+        }
+    }
+    .main-page{
+        background: initial;
+    }
+}
